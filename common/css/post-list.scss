@@ -4,6 +4,12 @@
   a:focus {
     text-decoration : none;
   }
+  @media (min-width : 1200px) {
+    max-width    : 1000px;
+    width        : 1000px;
+    margin-right : auto;
+    margin-left  : auto;
+  }
 }
 
 .post-preview {

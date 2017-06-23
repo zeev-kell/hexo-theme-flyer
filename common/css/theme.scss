@@ -17,13 +17,6 @@ a {
   }
 }
 
-@media (min-width : 1200px) {
-  .container {
-    max-width : 1000px;
-    width     : 1000px;
-  }
-}
-
 blockquote {
   color      : #808080;
   font-style : italic;
@@ -33,6 +26,10 @@ blockquote {
 
 blockquote p {
   margin : 0;
+}
+
+article {
+  position : relative;
 }
 
 @media screen and (max-width : 768px) {

@@ -3501,11 +3501,6 @@ a {
   a:hover, a:focus {
     color: #2980b9; }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1000px;
-    width: 1000px; } }
-
 blockquote {
   color: #808080;
   font-style: italic;
@@ -3514,6 +3509,9 @@ blockquote {
 
 blockquote p {
   margin: 0; }
+
+article {
+  position: relative; }
 
 @media screen and (max-width: 768px) {
   select {
@@ -3604,6 +3602,12 @@ pre code {
   .post-list a:hover,
   .post-list a:focus {
     text-decoration: none; }
+  @media (min-width: 1200px) {
+    .post-list {
+      max-width: 1000px;
+      width: 1000px;
+      margin-right: auto;
+      margin-left: auto; } }
 
 .post-preview {
   margin-bottom: 5rem; }
