@@ -1,0 +1,9 @@
+<!-- Archive -->
+<% if (site.posts.length){ %>
+<section>
+    <h5 class="section-title"><a><%= __('ARCHIVES') %></a></h5>
+    <div class="widget">
+      <%- list_archives({show_count: config.show_count, type: config.archive_type}) %>
+    </div>
+</section>
+<% } %>

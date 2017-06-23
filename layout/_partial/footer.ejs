@@ -1,0 +1,21 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <%- partial('_partial/link') %>
+                <p class="copyright text-muted">
+                    Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %><br>
+                    <small>Power By <a href="https://hexo.io" target="_blank">Hexo</a></small>
+                     |
+                    <small>Theme By <a href="https://github.com/zeev-kell/hexo-theme-flyer" target="_blank">Flyer</a></small>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<%- js('js/common.min.js') %>
+<%- partial('_partial/analysis') %>
+
+

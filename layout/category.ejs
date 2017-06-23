@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<!-- category -->
+<section>
+	<h1>Category: <%= page.category %></h1>
+	<div class="row">
+	<div class="col-md-9 col-xs-12">
+		<%- partial('_partial/archive', { type: 'category' }) %>
+	</div>
+	<div class="col-md-3 hidden-xs sidebar-container">
+    	<%- partial('_widget/category') %>
+	</div>
+	</div>
+</section>

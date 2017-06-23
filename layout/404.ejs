@@ -1,0 +1,15 @@
+---
+layout: layout
+---
+
+<!-- 404 -->
+<header class="intro-header" style="background-image: url('<%= config.root + (page["header-img"] || config["header-img"]) %>')">
+    <div class="site-heading">
+        <h1>404</h1>
+        <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+    </div>
+</header>
+
+<script>
+    document.body.classList.add('page-fullscreen');
+</script>

@@ -1,0 +1,34 @@
+---
+layout: page
+---
+
+<%
+    var years = {};
+    site.posts.sort('date').reverse().forEach(function (post) {
+        var year = post.date.year()
+        if (years[year] === undefined) {
+            years[year] = [];
+        }
+        years[year].push(post);
+    });
+%>
+
+<% Object.keys(years).reverse().forEach(function(year){ %>
+    <div class="archive-list">
+        <h2 class="listing-seperator" id="<%= year %>">
+            <%- year %>
+        </h2>
+        <ul>
+            <% years[year].map(function(post){ %>
+            <li>
+                <span class="date"><%= post.date.format('MM-DD') %></span>
+                <a href="<%- config.root %><%- post.path %>">
+                    <span>
+                        <%- post.title || "Untitled" %>
+                    </span>
+                </a>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+<% }) %>

@@ -1,0 +1,13 @@
+@import "../icon/iconfont.css";
+
+.iconfont {
+  font-size : 2em;
+}
+
+.icon-link a {
+  text-decoration : none;
+  color           : #B0B0B0;
+  &:hover {
+    color : #404040;
+  }
+}

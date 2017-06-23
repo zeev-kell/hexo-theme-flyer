@@ -1,0 +1,33 @@
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    var loadSrc = function (src, callback) {
+        var script = document.createElement('script'),
+            head = document.getElementsByTagName('head')[0];
+        script.src = src;
+        if (callback) {
+            script.addEventListener('load', function (e) {
+                callback(null, e);
+            }, false);
+        }
+        head.appendChild(script);
+    }
+
+    loadSrc("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+        anchors.options = {
+            visible  : 'hover',
+            placement: 'left',
+            icon     : 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    @media all and (min-width : 800px) {
+        .anchorjs-link {
+            position   : absolute;
+            left       : -0.75em;
+            font-size  : 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>

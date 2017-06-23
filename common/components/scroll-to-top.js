@@ -1,0 +1,21 @@
+import "./scroll-to-top.scss";
+var scrollToTop = '<a id="scroll-to-top" href="#" class=""></a>';
+
+$(function() {
+    var $scroll = $(scrollToTop);
+    $('body').append($scroll);
+    var $window = $(window);
+
+    $window.scroll(function() {
+        $window.scrollTop() > $window.height() * 0.5 ? $scroll.addClass("show") : $scroll.removeClass("show");
+    });
+
+    $scroll.click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500, function() {
+            $scroll.removeClass("show");
+        });
+        return false;
+    });
+});

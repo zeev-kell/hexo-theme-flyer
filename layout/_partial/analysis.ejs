@@ -1,0 +1,12 @@
+<% if (config.ba_track_id) { %>
+<script>
+    var _baId = '<%= config.ba_track_id %>';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(hm);
+    })();
+</script>
+<% } %>

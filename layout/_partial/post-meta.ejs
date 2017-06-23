@@ -1,0 +1,21 @@
+<ul class="post-meta">
+    <li>
+        <span class="iconfont icon-time1"></span>
+        <%= post.date.format(config.date_format) %></li>
+    <li>
+        <span class="iconfont icon-category_focus"></span>
+        <% post.categories.forEach(function(category){ %>
+        <a class="category" href="<%= config.root + category.path %>" title="<%= category.name %>">
+            <span><%= category.name %></span>
+        </a>
+        <% }) %>
+    </li>
+    <li>
+        <span class="iconfont icon-tag1"></span>
+        <% if (config.home_posts_tag){ %>
+        <% post.tags.forEach(function(tag){ %>
+        <%- partial('_partial/tag', {tag: tag}) %>
+        <% }) %>
+        <% } %>
+    </li>
+</ul>

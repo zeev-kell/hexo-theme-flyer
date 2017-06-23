@@ -1,0 +1,7 @@
+// tablet 以下
+$screen-xs : 767px;
+// tablet 以上（含tablet）
+$screen-tablet : ($screen-xs + 1);
+
+$a-color:#2c3e50;
+$a-color-hover: #2980b9;

@@ -1,0 +1,58 @@
+---
+layout: layout
+---
+
+<!-- Post  -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 post-container">
+
+                <%- page.content %>
+
+                <hr>
+                <ul class="pager">
+                    <% if (page.prev){ %>
+                        <li class="previous">
+                            <a href="<%- config.root %><%- page.prev.path %>" title="<%- page.prev.title %>">
+                                <%- page.prev.title %>
+                            </a>
+                        </li>
+                    <% } %>
+                    <% if (page.next){ %>
+                        <li class="next">
+                            <a href="<%- config.root %><%- page.next.path %>" title="<%- page.next.title %>">
+                                <%- page.next.title %>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+
+            </div>
+
+            <%- partial('_partial/post-content') %>
+
+            <div class="col-md-9 sidebar-container">
+
+                <% if(config['tags'] && page.tags.length) { %>
+                <hr>
+                <section>
+                    <h5><a href="<%= config.root %>tags/">Tags</a></h5>
+                    <div class="tags">
+                       <% page.tags.forEach(function(tag){ %>
+                          <a class="tag" href="<%= config.root %>tags/<%= tag.name %>/" title="<%= tag.name %>">
+                              <%= tag.name %>
+                          </a>
+                        <% }) %>
+                    </div>
+                </section>
+                <% }%>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<% if(config['anchorjs']) { %>
+    <%- partial('_partial/anchor') %>
+<% } %>

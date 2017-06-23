@@ -1,0 +1,48 @@
+<!-- Header header.ejs -->
+<style type="text/css">
+    .site-heading{
+        <% if (is_home()) { %>
+            /*home*/
+            background-image: url('<%= config.root + config["header-img"] %>');
+            background-position: bottom;
+            color:#000;
+        <%} else if (is_post()){%>
+            /*post*/
+            <% if (page["header-img"]) { %>
+                background-image: url('<%= page["header-img"] %>');
+            <%} %>
+            <% if (page["bg-color"]) { %>
+                background-color: <%= page["bg-color"] %>;
+            <%} %>
+        <%} else if(is_category()){%>
+            /*category*/
+            background-image: url('<%= config.root + "img/header_img/tag-bg.jpg" %>');
+            color: white;
+        <%} else if(is_tag()){%>
+            /*tag*/
+            background-image: url('<%= config.root + "img/header_img/tag-bg.jpg" %>');
+            color: white;
+        <%} else { %>
+            /*page*/
+            <% if (page["header-img"]) { %>
+                background-image: url('<%= config.root + page["header-img"] %>');
+            <%} %>
+        <% } %>
+    }
+    <% if (page["color"]) { %>
+    .site-heading,
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav li a{
+        color: <%= page["color"] %>;
+    }
+    <%} %>
+</style>
+<header class="intro-header">
+    <% if (is_post()) { %>
+        <%- partial('_partial/header-post') %>
+    <% } else if(is_home()) { %>
+        <%- partial('_partial/header-home') %>
+    <% } else { %>
+        <%- partial('_partial/header-other') %>
+    <% } %>
+</header>

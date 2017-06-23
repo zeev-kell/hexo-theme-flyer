@@ -1,0 +1,6 @@
+<!-- Sidebar sidebar.ejs -->
+<div class="col-md-3 col-md-offset-0 hidden-xs sidebar-container">
+    <% theme.widgets.forEach(function(widget){ %>
+        <%- partial('_widget/' + widget) %>
+    <% }) %>
+</div>

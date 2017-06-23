@@ -1,0 +1,42 @@
+.background {
+  background            : no-repeat center center;
+  background-color      : #808080;
+  background-attachment : scroll;
+  background-size       : cover;
+  margin-bottom         : 0;
+}
+
+.site-heading {
+  height          : 550px;
+  display         : flex;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : center;
+  h1 {
+    font-size      : 3.5rem;
+    text-transform : uppercase;
+    margin         : 0;
+  }
+  .subheading {
+    font-size : 1.2rem;
+    opacity   : .5;
+    padding   : 10px 20px;
+  }
+}
+
+.intro-header {
+  margin-bottom : 2rem;
+}
+
+.site-heading .post-meta {
+  border-width : 0;
+  padding      : 10px 20px;
+  color        : inherit;
+  > li {
+    margin : 0 .8rem;
+  }
+}
+
+.site-heading a {
+  color : inherit;
+}

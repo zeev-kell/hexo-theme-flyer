@@ -1,0 +1,147 @@
+@import "../css/var.scss";
+
+$color : #404040;
+$hover : #0085a1;
+// navbar-toggle
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:hover {
+  background-color : inherit;
+}
+
+.navbar-custom .navbar-toggle:active {
+  background-color : rgba(255, 255, 255, 0.25);
+}
+
+.navbar-custom .navbar-toggle {
+  border-color  : transparent;
+  padding       : 19px 16px;
+  margin-top    : 2px;
+  margin-right  : 2px;
+  margin-bottom : 2px;
+  border-radius : 50%;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+  width            : 18px;
+  border-radius    : 0;
+  background-color : $color;
+}
+
+.navbar-custom .navbar-toggle .icon-bar + .icon-bar {
+  margin-top : 3px;
+}
+
+.navbar-custom {
+  background  : none;
+  border      : none;
+  position    : absolute;
+  top         : 0;
+  left        : 0;
+  width       : 100%;
+  z-index     : 3;
+  line-height : 1.7;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight : 800;
+  color       : inherit;
+  height      : 56px;
+  line-height : 25px;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color : $hover;
+}
+
+.navbar-custom .nav li a {
+  font-size      : 12px;
+  line-height    : 20px;
+  font-weight    : 800;
+  letter-spacing : 1px;
+  color          : inherit;
+}
+
+.navbar-custom .nav li a:active {
+  background : rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (min-width : 768px) {
+  .navbar-custom {
+    background    : transparent;
+    border-bottom : 1px solid transparent;
+  }
+  .navbar-custom body {
+    font-size : 20px;
+  }
+  .navbar-custom .navbar-brand {
+    padding     : 20px;
+    line-height : 20px;
+  }
+  .navbar-custom .nav li a {
+    padding : 20px;
+  }
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color : $hover;
+  }
+  .navbar-custom .nav li a:active {
+    background : none;
+  }
+}
+
+@media only screen and (min-width : 1170px) {
+  .navbar-custom {
+    transition          : background-color 0.3s;
+    transform           : translate3d(0, 0, 0);
+    backface-visibility : hidden;
+  }
+  .navbar-custom.is-fixed {
+    position         : fixed;
+    top              : -61px;
+    background-color : rgba(255, 255, 255, 0.9);
+    border-bottom    : 1px solid #f2f2f2;
+    transition       : transform 0.3s;
+  }
+  .navbar-custom.is-fixed .navbar-brand {
+    color : $color;
+  }
+  .navbar-custom.is-fixed .nav li a {
+    color : $color;
+  }
+  .navbar-custom.is-fixed .navbar-brand:hover,
+  .navbar-custom.is-fixed .navbar-brand:focus {
+    color : $hover;
+  }
+  .navbar-custom.is-fixed .nav li a:hover,
+  .navbar-custom.is-fixed .nav li a:focus {
+    color : $hover;
+  }
+  .navbar-custom.is-visible {
+    transform : translate3d(0, 100%, 0);
+  }
+}
+
+// 移动端切换导航条
+@media only screen and (max-width : 767px) {
+  #navbar-wrap {
+    transition : all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    height     : 100vh;
+    position   : fixed;
+    width      : 50%;
+    top        : 0;
+    right      : 0;
+    background : rgba(0, 0, 0, 0.8);
+    transform  : translate(100%, 0);
+    .navbar-nav {
+      margin : 0;
+    }
+  }
+  #navbar-wrap a {
+    font-size   : 13px;
+    line-height : 28px;
+    color       : #FFFFFF;
+  }
+  #navbar-wrap li {
+    text-align : right;
+  }
+}

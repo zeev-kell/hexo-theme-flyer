@@ -1,0 +1,9 @@
+<!-- Category -->
+<% if (site.categories.length){ %>
+<section>
+    <h5><a><%= __('Categories') %></a></h5>
+    <div class="widget">
+      <%- list_categories({show_count: theme.show_count}) %>
+    </div>
+</section>
+<% } %>
