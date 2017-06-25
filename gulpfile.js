@@ -28,10 +28,12 @@ gulp.task("webpack", function (callback) {
 
 gulp.task("less", function () {
     var less = require("gulp-less");
-    return gulp.src("./common*/css/bootstrap.less")
+    var cleanCss = require("gulp-clean-css");
+    return gulp.src("./common/css/bootstrap.less")
         .pipe(less())
         .on('error', function (err) {
             console.log(err.toString());
         })
-        .pipe(gulp.dest("./"));
+        .pipe(cleanCss())
+        .pipe(gulp.dest("./source/css"));
 })

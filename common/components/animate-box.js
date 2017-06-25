@@ -12,14 +12,16 @@ $(function() {
                     times = 10;
                 }
                 items.each(function(k) {
-                    let el = $(this);
-                    let cl = el.attr("data-animation") ? el.attr("data-animation") + " animated" : "fadeInUp animated";
-                    let delay = el.attr("data-delay") ? Number(el.attr("data-delay")) : 0;
+                    let $el = $(this);
+                    let cl = $el.attr("data-animation") ? $el.attr("data-animation") + " animated" : "fadeIn animated";
+                    let delay = $el.attr("data-delay") ? Number($el.attr("data-delay")) : 0;
+                    let pause = $el.attr("data-pause") ? Number($el.attr("data-pause")) : 0;
                     time = time + (80 + delay) / times;
                     setTimeout(function() {
-                        el.addClass(cl);
-                        el.removeClass('item-animate');
+                        $el.addClass(cl);
+                        $el.removeClass('item-animate');
                     }, time, 'easeInOutExpo');
+                    time += pause;
                 });
             }, 50);
         }

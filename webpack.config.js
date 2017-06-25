@@ -13,11 +13,11 @@ function common(dir) {
 }
 
 var plugins = [];
-plugins.push(new webpack.ProvidePlugin({
-    "$"            : "jquery",
-    "jQuery"       : "jquery",
-    "window.jQuery": "jquery"
-}));
+// plugins.push(new webpack.ProvidePlugin({
+//     "$"            : "jquery",
+//     "jQuery"       : "jquery",
+//     "window.jQuery": "jquery"
+// }));
 plugins.push(new ExtractTextPlugin('../css/common.min.css'));
 
 if (isPro) {

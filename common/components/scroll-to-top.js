@@ -6,9 +6,13 @@ $(function() {
     $('body').append($scroll);
     var $window = $(window);
 
-    $window.scroll(function() {
+    function onScroll() {
         $window.scrollTop() > $window.height() * 0.5 ? $scroll.addClass("show") : $scroll.removeClass("show");
-    });
+    }
+    
+    $window.scroll(onScroll);
+
+    onScroll();
 
     $scroll.click(function() {
         $("html, body").animate({

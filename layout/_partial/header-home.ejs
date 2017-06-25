@@ -1,4 +1,7 @@
 <div class="site-heading background">
-    <h1><%= config.title %></h1>
-    <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+	<div class="profile animate-box hidden-xs" data-animation="flip" data-pause="1000">
+        <a href="<%= config.root + 'about/' %>"><img src="<%= config['root'] + config['sidebar-avatar'] %>"></a>
+    </div>
+    <h1 class="animate-box"><%= config.title %></h1>
+    <span class="subheading animate-box" data-delay="200"><%= page.description || config.subtitle || "" %></span>
 </div>

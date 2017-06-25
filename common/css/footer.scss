@@ -1,8 +1,14 @@
 footer {
   font-size : 20px;
   padding   : 40px 0 40px;
+/*  background-color: #999;
+  margin-top: 2rem;*/
   .icon-link {
     text-align : center;
+  }
+  a{
+    color: inherit;
+    text-decoration: underline;
   }
 }
 

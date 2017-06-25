@@ -1,3 +1,4 @@
+@import "var.scss";
 .background {
   background            : no-repeat center center;
   background-color      : #808080;
@@ -7,20 +8,29 @@
 }
 
 .site-heading {
-  height          : 550px;
+  height          : 450px;
   display         : flex;
   align-items     : center;
   flex-direction  : column;
   justify-content : center;
   h1 {
-    font-size      : 3.5rem;
-    text-transform : uppercase;
+    font-size      : 2.5rem;
+    /*text-transform : uppercase;*/
     margin         : 0;
   }
   .subheading {
     font-size : 1.2rem;
     opacity   : .5;
     padding   : 10px 20px;
+  }
+  @media screen and (max-width : $contain-desktop) {
+    height          : 400px;
+  }
+  @media screen and (max-width : $contain-laptop) {
+    height          : 350px;
+  }
+  @media screen and (max-width : $contain-tablet) {
+    height          : 300px;
   }
 }
 
@@ -30,7 +40,7 @@
 
 .site-heading .post-meta {
   border-width : 0;
-  padding      : 10px 20px;
+  padding      : 20px 20px 0 20px;
   color        : inherit;
   > li {
     margin : 0 .8rem;
@@ -39,4 +49,11 @@
 
 .site-heading a {
   color : inherit;
+}
+
+.profile img{
+  width: 120px;
+  height:120px;
+  border-radius: 100%;
+  margin-bottom: 20px;
 }

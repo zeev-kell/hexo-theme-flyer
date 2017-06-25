@@ -6,11 +6,16 @@ layout: page
 <section>
 	<h1>Category: <%= page.category %></h1>
 	<div class="row">
-	<div class="col-md-9 col-xs-12">
-		<%- partial('_partial/archive', { type: 'category' }) %>
-	</div>
-	<div class="col-md-3 hidden-xs sidebar-container">
-    	<%- partial('_widget/category') %>
-	</div>
+		<div class="col-md-9 col-xs-12">
+			<%- partial('_partial/archive', { type: 'category' }) %>
+		</div>
+		<div class="col-md-3 hidden-xs sidebar-container">
+	    	<section>
+			    <h5><a><%= __('Categories') %></a></h5>
+			    <div class="widget">
+			      <%- list_categories({show_count: theme.show_count}) %>
+			    </div>
+			</section>
+		</div>
 	</div>
 </section>

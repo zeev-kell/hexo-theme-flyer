@@ -5,12 +5,14 @@ layout: page
 <!-- tag -->
 <section>
 	<h1>Tag: <%= page.tag %></h1>
-	<div class="row">
-	<div class="col-md-9 col-xs-12">
-		<%- partial('_partial/archive', { type: 'tag' }) %>
-	</div>
-	<div class="col-md-3 hidden-xs sidebar-container">
-    	<%- partial('_widget/tags') %>
-	</div>
-	</div>
+	<section>
+	    <div class="tags">
+	        <% site.tags.map(function(tag){  %>
+	            <% if(tag.length > config['tag-condition-size']) { %>
+	                <%- partial('_partial/tag',{tag:tag}) %>
+	            <% } %>
+	        <% }) %>
+	    </div>
+	</section>
+	<%- partial('_partial/archive', { type: 'tag' }) %>
 </section>
