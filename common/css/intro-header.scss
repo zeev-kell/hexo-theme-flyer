@@ -1,59 +1,77 @@
 @import "var.scss";
 .background {
-  background            : no-repeat center center;
-  background-color      : #808080;
-  background-attachment : scroll;
-  background-size       : cover;
-  margin-bottom         : 0;
+    background: no-repeat center center;
+    background-color: #808080;
+    background-attachment: scroll;
+    background-size: cover;
+    margin-bottom: 0;
+    position: relative;
+    transition: all .5s ease-in 0s;
 }
 
 .site-heading {
-  height          : 450px;
-  display         : flex;
-  align-items     : center;
-  flex-direction  : column;
-  justify-content : center;
-  h1 {
-    font-size      : 2.5rem;
-    /*text-transform : uppercase;*/
-    margin         : 0;
-  }
-  .subheading {
-    font-size : 1.2rem;
-    opacity   : .5;
-    padding   : 10px 20px;
-  }
-  @media screen and (max-width : $contain-desktop) {
-    height          : 400px;
-  }
-  @media screen and (max-width : $contain-laptop) {
-    height          : 350px;
-  }
-  @media screen and (max-width : $contain-tablet) {
-    height          : 300px;
-  }
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        font-size: 2.5rem;
+        /*text-transform : uppercase;*/
+        margin: 0;
+    }
+    .subheading {
+        font-size: 1.2rem;
+        opacity: .5;
+        padding: 10px 20px;
+    }
+    @media screen and (max-width: $contain-desktop) {
+        height: 400px;
+    }
+    @media screen and (max-width: $contain-laptop) {
+        height: 350px;
+    }
+    @media screen and (max-width: $contain-tablet) {
+        height: 300px;
+    }
 }
 
 .intro-header {
-  margin-bottom : 2rem;
+    margin-bottom: 2rem;
 }
 
 .site-heading .post-meta {
-  border-width : 0;
-  padding      : 20px 20px 0 20px;
-  color        : inherit;
-  > li {
-    margin : 0 .8rem;
-  }
+    border-width: 0;
+    padding: 20px 20px 0 20px;
+    color: inherit;
+    margin: 0;
+    > li {
+        margin: 0 .8rem;
+    }
 }
 
 .site-heading a {
-  color : inherit;
+    color: inherit;
 }
 
-.profile img{
-  width: 120px;
-  height:120px;
-  border-radius: 100%;
-  margin-bottom: 20px;
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+#birds-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  transition: all 0.5s ease-in 0s;
+  background-image: url('../img/birds.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center bottom;
 }

@@ -37,3 +37,13 @@ gulp.task("less", function () {
         .pipe(cleanCss())
         .pipe(gulp.dest("./source/css"));
 })
+
+gulp.task("uglify", function () {
+    var uglify   = require('gulp-uglify');
+    return gulp.src("./common/js/three_birds.js")
+        .pipe(uglify())
+        .on('error', function (err) {
+            console.log(err.toString());
+        })
+        .pipe(gulp.dest("./source/js"));
+})

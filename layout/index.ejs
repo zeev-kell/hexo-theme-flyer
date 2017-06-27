@@ -32,5 +32,23 @@ layout: page
         <% } %>
     </ul>
 </div>
-
-
+<script>
+    (function () {
+        if (window.innerWidth > 767) {
+            var loadSrc = function(src, callback) {
+                var script = document.createElement('script'),
+                    head = document.getElementsByTagName('head')[0];
+                script.src = src;
+                if (callback) {
+                    script.addEventListener('load', function(e) {
+                        callback(null, e);
+                    }, false);
+                }
+                head.appendChild(script);
+            }
+            loadSrc("/js/three_birds.js",function(){
+                 loadSrc("/js/birds.js")
+            });
+        }
+    })();
+</script>
