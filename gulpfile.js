@@ -40,7 +40,7 @@ gulp.task("less", function () {
 
 gulp.task("uglify", function () {
     var uglify   = require('gulp-uglify');
-    return gulp.src("./common/js/three_birds.js")
+    return gulp.src("./common/js/birds.js")
         .pipe(uglify())
         .on('error', function (err) {
             console.log(err.toString());

@@ -39,6 +39,7 @@ var config = {
     },
     output : {
         path    : resolve("js"),
+        publicPath: "/js/",
         filename: '[name].min.js'
     },
     resolve: {

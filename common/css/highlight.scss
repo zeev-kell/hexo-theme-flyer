@@ -1,0 +1,130 @@
+.highlight .table-responsive {
+    border: none;
+    margin: 0;
+}
+
+.highlight pre {
+    border: none;
+    margin: 0;
+    padding: 1px;
+}
+
+.highlight table {
+    margin: 0;
+    width: auto;
+    border: none;
+}
+
+.highlight td {
+    border: none !important;
+    padding: 0;
+}
+
+.highlight figcaption {
+    zoom: 1;
+    font-size: 1em;
+    color: #c5c8c6;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+
+.highlight figcaption:before,
+.highlight figcaption:after {
+    content: "";
+    display: table;
+}
+
+.highlight figcaption:after {
+    clear: both;
+}
+
+.highlight figcaption a {
+    float: right;
+    color: #c5c8c6;
+}
+
+.highlight figcaption a:hover {
+    border-bottom-color: #c5c8c6;
+}
+
+.highlight .gutter pre {
+    color: #666;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.highlight .line {
+    height: 20px;
+}
+
+.gist table {
+    width: auto;
+}
+
+.gist table td {
+    border: none;
+}
+
+pre .comment {
+    color: #969896;
+}
+
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+    color: #c66;
+}
+
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command {
+    color: #de935f;
+}
+
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .number,
+pre .formula {
+    color: #b5bd68;
+}
+
+pre .title,
+pre .css .hexcolor {
+    color: #8abeb7;
+}
+
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+    color: #81a2be;
+}
+
+pre .keyword,
+pre .javascript .function {
+    color: #b294bb;
+}

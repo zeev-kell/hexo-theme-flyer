@@ -1,9 +1,9 @@
 .post-container a {
-  color : #337ab7;
-  &:hover,
-  &:focus {
-    color : #0085a1;
-  }
+    color: #337ab7;
+    &:hover,
+    &:focus {
+        color: #0085a1;
+    }
 }
 
 .post-container h1,
@@ -12,58 +12,58 @@
 .post-container h4,
 .post-container h5,
 .post-container h6 {
-  margin : 30px 0 10px;
+    margin: 30px 0 10px;
 }
 
 .post-container h5 {
-  font-size   : 19px;
-  font-weight : 600;
-  color       : gray;
+    font-size: 19px;
+    font-weight: 600;
+    color: gray;
 }
 
 .post-container h5 + p {
-  margin-top : 5px;
+    margin-top: 5px;
 }
 
 .post-container h6 {
-  font-size   : 16px;
-  font-weight : 600;
-  color       : gray;
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
 }
 
 .post-container h6 + p {
-  margin-top : 5px;
+    margin-top: 5px;
 }
 
 .post-container ul,
 .post-container ol {
-  margin-bottom : 40px;
+    margin-bottom: 40px;
 }
 
-@media screen and (max-width : 768px) {
-  .post-container ul,
-  .post-container ol {
-    padding-left : 30px;
-  }
+@media screen and (max-width: 768px) {
+    .post-container ul,
+    .post-container ol {
+        padding-left: 30px;
+    }
 }
 
-@media screen and (max-width : 500px) {
-  .post-container ul,
-  .post-container ol {
-    padding-left : 20px;
-  }
+@media screen and (max-width: 500px) {
+    .post-container ul,
+    .post-container ol {
+        padding-left: 20px;
+    }
 }
 
 .post-container ol ol,
 .post-container ol ul,
 .post-container ul ol,
 .post-container ul ul {
-  margin-bottom : 5px;
+    margin-bottom: 5px;
 }
 
 .post-container li p {
-  margin        : 0;
-  margin-bottom : 5px;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .post-container li h1,
@@ -72,173 +72,44 @@
 .post-container li h4,
 .post-container li h5,
 .post-container li h6 {
-  line-height : 2;
-  margin-top  : 20px;
+    line-height: 2;
+    margin-top: 20px;
 }
 
 .post-container img {
-  display       : block;
-  max-width     : 100%;
-  height        : auto;
-  margin-top    : 1.5rem;
-  margin-bottom : 1.5rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .post-container .tags a {
-  color        : gray;
-  border-color : gray;
+    color: gray;
+    border-color: gray;
 }
 
 .post-container .tags a:hover,
 .post-container .tags a:active {
-  color        : #0085a1;
-  border-color : #0085a1;
+    color: #0085a1;
+    border-color: #0085a1;
 }
 
 .post-container pre,
 .post-container .highlight {
-  overflow   : auto;
-  margin     : 20px 0;
-  padding    : 15px;
-  font-size  : 13px;
-  color      : #c5c8c6;
-  background : #1d1f21;
+    overflow: auto;
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 13px;
+    color: #c5c8c6;
+    background: #1d1f21;
+}
+
+.post-container code {
+    background: none;
 }
 
 .post-container pre code {
-  padding     : 0;
-  color       : #c5c8c6;
-  background  : none;
-  text-shadow : none;
-}
-
-.highlight .table-responsive {
-  border : none;
-  margin : 0;
-}
-
-.post-container .highlight pre {
-  border  : none;
-  margin  : 0;
-  padding : 1px;
-}
-
-.post-container .highlight table {
-  margin : 0;
-  width  : auto;
-  border : none;
-}
-
-.post-container .highlight td {
-  border  : none !important;
-  padding : 0;
-}
-
-.post-container .highlight figcaption {
-  zoom          : 1;
-  font-size     : 1em;
-  color         : #c5c8c6;
-  line-height   : 1em;
-  margin-bottom : 1em;
-}
-
-.post-container .highlight figcaption:before,
-.post-container .highlight figcaption:after {
-  content : "";
-  display : table;
-}
-
-.post-container .highlight figcaption:after {
-  clear : both;
-}
-
-.post-container .highlight figcaption a {
-  float : right;
-  color : #c5c8c6;
-}
-
-.post-container .highlight figcaption a:hover {
-  border-bottom-color : #c5c8c6;
-}
-
-.post-container .highlight .gutter pre {
-  color         : #666;
-  text-align    : right;
-  padding-right : 20px;
-}
-
-.post-container .highlight .line {
-  height : 20px;
-}
-
-.post-container .gist table {
-  width : auto;
-}
-
-.post-container .gist table td {
-  border : none;
-}
-
-.post-container pre .comment {
-  color : #969896;
-}
-
-.post-container pre .variable,
-.post-container pre .attribute,
-.post-container pre .tag,
-.post-container pre .regexp,
-.post-container pre .ruby .constant,
-.post-container pre .xml .tag .title,
-.post-container pre .xml .pi,
-.post-container pre .xml .doctype,
-.post-container pre .html .doctype,
-.post-container pre .css .id,
-.post-container pre .css .class,
-.post-container pre .css .pseudo {
-  color : #c66;
-}
-
-.post-container pre .number,
-.post-container pre .preprocessor,
-.post-container pre .built_in,
-.post-container pre .literal,
-.post-container pre .params,
-.post-container pre .constant,
-.post-container pre .command {
-  color : #de935f;
-}
-
-.post-container pre .ruby .class .title,
-.post-container pre .css .rules .attribute,
-.post-container pre .string,
-.post-container pre .value,
-.post-container pre .inheritance,
-.post-container pre .header,
-.post-container pre .ruby .symbol,
-.post-container pre .xml .cdata,
-.post-container pre .special,
-.post-container pre .number,
-.post-container pre .formula {
-  color : #b5bd68;
-}
-
-.post-container pre .title,
-.post-container pre .css .hexcolor {
-  color : #8abeb7;
-}
-
-.post-container pre .function,
-.post-container pre .python .decorator,
-.post-container pre .python .title,
-.post-container pre .ruby .function .title,
-.post-container pre .ruby .title .keyword,
-.post-container pre .perl .sub,
-.post-container pre .javascript .title,
-.post-container pre .coffeescript .title {
-  color : #81a2be;
-}
-
-.post-container pre .keyword,
-.post-container pre .javascript .function {
-  color : #b294bb;
+    padding: 0;
+    color: #c5c8c6;
 }

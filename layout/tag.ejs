@@ -4,12 +4,13 @@ layout: page
 
 <!-- tag -->
 <section>
-	<h1>Tag: <%= page.tag %></h1>
 	<section>
 	    <div class="tags">
 	        <% site.tags.map(function(tag){  %>
 	            <% if(tag.length > config['tag-condition-size']) { %>
-	                <%- partial('_partial/tag',{tag:tag}) %>
+	            	<a class="tag <% if(tag.name == page.tag){ %><%= 'active' %><% } %>" href="<%= config.root + 'tags/' + tag.name %>/" title="<%= tag.name %>">
+					  <%= tag.name %>
+					</a>
 	            <% } %>
 	        <% }) %>
 	    </div>
