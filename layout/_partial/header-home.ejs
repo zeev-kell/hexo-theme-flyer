@@ -1,9 +1,9 @@
 <div class="site-heading background">
 	<!-- <div class="profile animate-box hidden-xs" data-animation="flip" data-pause="1000">
-        <a href="<%= config.root + 'about/' %>"><img src="<%= config['root'] + config['sidebar-avatar'] %>"></a>
+        <a href="<%= url_for('about/') %>"><img src="<%= config['root'] + config['sidebar-avatar'] %>"></a>
     </div> -->
     <h1 class="animate-box">
-    	<a href="<%= config.root + 'about/' %>"><%= config.title %></a>
+    	<a href="<%= url_for('about/') %>"><%= config.title %></a>
     </h1>
     <span class="subheading animate-box" data-delay="200"><%= page.description || config.subtitle || "" %></span>
 	<div id="birds-container"></div>

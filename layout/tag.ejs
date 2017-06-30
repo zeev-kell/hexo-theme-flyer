@@ -5,10 +5,11 @@ layout: page
 <!-- tag -->
 <section>
 	<section>
+		<div><%- tagcloud() %></div>
 	    <div class="tags">
 	        <% site.tags.map(function(tag){  %>
 	            <% if(tag.length > config['tag-condition-size']) { %>
-	            	<a class="tag <% if(tag.name == page.tag){ %><%= 'active' %><% } %>" href="<%= config.root + 'tags/' + tag.name %>/" title="<%= tag.name %>">
+	            	<a class="tag <% if(tag.name == page.tag){ %><%= 'active' %><% } %>" href="<%= url_for('tags/' + tag.name) %>/" title="<%= tag.name %>">
 					  <%= tag.name %>
 					</a>
 	            <% } %>

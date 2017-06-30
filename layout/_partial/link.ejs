@@ -1,7 +1,7 @@
 <ul class="list-inline icon-link">
 	<% if (config.RSS) { %>
 	    <li>
-	        <a href="<%= config.root + 'feed.xml' %>">
+	        <a href="<%= url_for('feed.xml') %>">
 	            <span class="fa-stack">
 	                <i class="fa fa-circle fa-stack-2x"></i>
 	                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>

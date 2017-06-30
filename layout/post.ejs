@@ -11,14 +11,14 @@ layout: layout
                 <ul class="pager">
                     <% if (page.prev){ %>
                     <li class="previous">
-                        <a href="<%- config.root %> <%- page.prev.path %>" title="<%- page.prev.title %>">
+                        <a href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
                             <%- page.prev.title %>
                         </a>
                     </li>
                     <% } %>
                     <% if (page.next){ %>
                     <li class="next">
-                        <a href="<%- config.root %> <%- page.next.path %>" title="<%- page.next.title %>">
+                        <a href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
                             <%- page.next.title %>
                         </a>
                     </li>

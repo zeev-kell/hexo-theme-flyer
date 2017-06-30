@@ -22,7 +22,7 @@ layout: page
             <% years[year].map(function(post){ %>
             <li>
                 <span class="date"><%= post.date.format('MM-DD') %></span>
-                <a href="<%- config.root %><%- post.path %>">
+                <a href="<%- url_for(post.path) %>">
                     <span>
                         <%- post.title || "Untitled" %>
                     </span>

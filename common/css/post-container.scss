@@ -105,8 +105,11 @@
     background: #1d1f21;
 }
 
-.post-container code {
-    background: none;
+.post-container,
+.post-content-preview {
+    code {
+        background: none;
+    }
 }
 
 .post-container pre code {

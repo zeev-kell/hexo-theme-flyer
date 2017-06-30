@@ -3,7 +3,7 @@
     .site-heading{
         <% if (is_home() || is_category() || is_tag()) { %>
             /* home || category || tag */
-            background-image: url('<%= config.root + config["header-img"] %>');
+            background-image: url('<%= url_for(config["header-img"]) %>');
             background-position: bottom;
             color:#000;
         <%} else { %>

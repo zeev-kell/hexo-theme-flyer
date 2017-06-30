@@ -3,7 +3,7 @@ layout: layout
 ---
 
 <!-- 404 -->
-<header class="intro-header" style="background-image: url('<%= config.root + (page["header-img"] || config["header-img"]) %>')">
+<header class="intro-header" style="background-image: url('<%= url_for(page["header-img"] || config["header-img"]) %>')">
     <div class="site-heading">
         <h1>404</h1>
         <span class="subheading"><%= page.description || config.subtitle || "" %></span>

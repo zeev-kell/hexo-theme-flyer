@@ -10,7 +10,7 @@ var gulp = require('gulp'),
  */
 
 const config = require("./webpack.config");
-gulp.task('default', ['webpack', 'less'], function () {
+gulp.task('default', ['webpack'], function () {
     gulp.watch(['./common/**/*'], ['webpack']);
 });
 
