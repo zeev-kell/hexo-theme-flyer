@@ -1,5 +1,10 @@
+@import "var";
+
 .post-list {
   margin-top : 3rem;
+  @media (max-width : $tablet-xs) {
+    margin-top : 1rem;
+  }
   a:hover,
   a:focus {
     text-decoration : none;
@@ -9,6 +14,9 @@
     width        : 1000px;
     margin-right : auto;
     margin-left  : auto;
+  }
+  .post-preview:last-child {
+    margin-bottom : 3rem;
   }
 }
 
@@ -23,6 +31,10 @@
   font-size     : 1.6rem;
   margin-top    : 1.8rem;
   margin-bottom : 1rem;
+  @media (max-width : $tablet-xs) {
+    margin-top    : .8rem;
+    margin-bottom : .5rem;
+  }
 }
 
 .post-meta {
@@ -51,7 +63,10 @@
 }
 
 .post-content-preview {
-  color : #8f8f8f;
-  font-size: .9rem;
-  overflow: hidden;
+  color     : #8f8f8f;
+  font-size : .9rem;
+  overflow  : hidden;
+  .table-responsive {
+    overflow-x : auto;
+  }
 }

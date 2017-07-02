@@ -1,14 +1,16 @@
+@import "var";
+
 footer {
-  font-size : 20px;
-  padding   : 40px 0 40px;
-/*  background-color: #999;
-  margin-top: 2rem;*/
+  font-size        : 20px;
+  padding          : 20px;
+  background-color : #303233;
+  margin-top       : 2rem;
   .icon-link {
     text-align : center;
   }
-  a{
-    color: inherit;
-    text-decoration: underline;
+  a {
+    color           : inherit;
+    text-decoration : underline;
   }
 }
 
@@ -18,7 +20,8 @@ footer .list-inline {
 }
 
 footer .copyright {
-  font-size  : 14px;
-  text-align : center;
-  margin     : 1rem;
+  font-size : 14px;
+  @media (max-width : $tablet-xs) {
+    text-align : center;
+  }
 }

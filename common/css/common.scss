@@ -3,7 +3,9 @@
 @import "post-list.scss";
 @import "post-container.scss";
 @import "highlight.scss";
-@import "pager.scss";
+//@import "pager.scss";
+@import "pagination.scss";
+//@import "flex-layout.scss";
 @import "page-fullscreen.scss";
 @import "widget.css";
 @import "iconfont.scss";
@@ -11,4 +13,16 @@
 
 .subheading {
   min-height : 20px;
+}
+
+.flex-row {
+  display : flex;
+}
+
+.flex-center {
+  align-items : center;
+}
+
+.flex-ju-center {
+  justify-content : center;
 }

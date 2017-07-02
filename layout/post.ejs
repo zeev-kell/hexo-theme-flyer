@@ -8,23 +8,18 @@ layout: layout
         <div class="row">
             <div class="col-md-9 post-container">
                 <%- page.content %>
-                <ul class="pager">
+                <div class="pagination">
                     <% if (page.prev){ %>
-                    <li class="previous">
-                        <a href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
-                            <%- page.prev.title %>
-                        </a>
-                    </li>
+                    <a class="prev-post" href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
+                        <%- page.prev.title %>
+                    </a>
                     <% } %>
                     <% if (page.next){ %>
-                    <li class="next">
-                        <a href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
-                            <%- page.next.title %>
-                        </a>
-                    </li>
+                    <a class="next-post" href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
+                        <%- page.next.title %>
+                    </a>
                     <% } %>
-                </ul>
-
+                </div>
             </div>
             <%- partial('_partial/post-content') %>
         </div>

@@ -3,7 +3,7 @@ layout: page
 ---
 <div class="post-list">
     <% page.posts.each(function(post){ %>
-    <div class="post-preview animate-box">
+    <div class="post-preview">
         <div class="post-header">
             <h3 class="post-title">
                 <a href="<%- url_for(post.path) %>">
@@ -12,55 +12,30 @@ layout: page
             </h3>
         </div>
         <div class="post-content-preview">
-            <% if (post.excerpt) { %>
-                <%- post.excerpt %>
-              <% } else { %>
-                  <%  
-                        var rsingleTag = /<(\w+)(.*?)>.*?<\/\1>/g;
-                        var match = post.content.match(rsingleTag);
-
-                        if(match){
-                            match = match.slice(0,match.length > 5 ? 5: match.length).join("")
-                        }else{
-                            match = post.content;
-                        }
-                    %>
-                  <%- match %>
-              <% } %>
+            <%- post.excerpt || truncate_markdown(post.content) %>
         </div>
-        <%- partial('_partial/post-meta',{post:post}) %>
+        <%- partial('_partial/post-meta', {post: post}) %>
     </div>
     <% }); %>
- 
-    <!-- Pager -->
-    <ul class="pager">
-        <% if (page.prev){ %>
-        <li class="previous">
-            <a href="<%- url_for(page.prev_link) %>">&larr; 上一页</a>
-        </li>
-        <% } %>
-        <% if (page.next){ %>
-        <li class="next">
-            <a href="<%- url_for(page.next_link) %>">下一页 &rarr;</a>
-        </li>
-        <% } %>
-    </ul>
+</div>
+<div class="pagination">
+    <%- paginator() %>
 </div>
 <script>
     if (window.innerWidth > 767) {
-        var loadSrc = function(src, callback) {
+        var loadSrc = function (src, callback) {
             var script = document.createElement('script'),
                 head = document.getElementsByTagName('head')[0];
             script.src = src;
             if (callback) {
-                script.addEventListener('load', function(e) {
+                script.addEventListener('load', function (e) {
                     callback(null, e);
                 }, false);
             }
             head.appendChild(script);
         }
-        loadSrc("/js/three_birds.js",function(){
-             loadSrc("/js/birds.js")
+        loadSrc("/js/three_birds.js", function () {
+            loadSrc("/js/birds.js")
         });
     }
 </script>
