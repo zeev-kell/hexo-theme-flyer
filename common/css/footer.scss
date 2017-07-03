@@ -21,7 +21,11 @@ footer .list-inline {
 
 footer .copyright {
   font-size : 14px;
+  line-height: 30px;
   @media (max-width : $tablet-xs) {
     text-align : center;
+  }
+  small{
+    display: inline-block;
   }
 }

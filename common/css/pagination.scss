@@ -1,27 +1,25 @@
 .pagination {
-  text-align : center;
-  .prev, .next {
-    display : none;
-  }
-  .prev-post {
-    float : left;
-  }
-  .next-post {
-    float : right;
-  }
-  .page-number {
-    display       : inline-block;
-    width         : 36px;
-    height        : 36px;
-    border-radius : 100%;
-    background    : #555;
-    color         : #FFF;
-    margin        : auto 5px;
-    line-height   : 36px;
-    text-align    : center;
-    &.current {
-      background : #ececec;
-      color      : #9c9c9c;
+    text-align: center;
+    .prev,
+    .next {
+        display: none;
     }
-  }
+    .page-number {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background: #555;
+        color: #FFF;
+        margin: auto 5px;
+        line-height: 36px;
+        text-align: center;
+        &.current {
+            background: #ececec;
+            color: #9c9c9c;
+        }
+    }
+    .post-title{
+      font-size: 1.2rem;
+    }
 }

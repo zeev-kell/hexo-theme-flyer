@@ -4,17 +4,17 @@ layout: page
 
 <!-- tag -->
 <section>
-	<section>
-		<div><%- tagcloud() %></div>
-	    <!--<div class="tags">-->
-	        <!--<% site.tags.map(function(tag){  %>-->
-	            <!--<% if(tag.length > config['tag-condition-size']) { %>-->
-	            	<!--<a class="tag <% if(tag.name == page.tag){ %><%= 'active' %><% } %>" href="<%= url_for('tags/' + tag.name) %>/" title="<%= tag.name %>">-->
-					  <!--<%= tag.name %>-->
-					<!--</a>-->
-	            <!--<% } %>-->
-	        <!--<% }) %>-->
-	    <!--</div>-->
-	</section>
-	<%- partial('_partial/archive', { type: 'tag' }) %>
+	<div class="row">
+		<div class="col-md-9 col-xs-12">
+			<%- partial('_partial/archive', { type: 'tag' }) %>
+		</div>
+		<div class="col-md-3 hidden-xs sidebar-container">
+	    	<section>
+			    <h5><a><%= __('Tags') %></a></h5>
+			    <div class="widget">
+			      <%- tagcloud() %>
+			    </div>
+			</section>
+		</div>
+	</div>
 </section>

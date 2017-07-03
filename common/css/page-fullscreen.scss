@@ -1,29 +1,31 @@
 .page-fullscreen .intro-header {
-  position : fixed;
-  left     : 0;
-  top      : 0;
-  width    : 100%;
-  height   : 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center;
+    background-size: cover;
 }
 
 .page-fullscreen footer {
-  position         : absolute;
-  width            : 100%;
-  bottom           : 0;
-  padding-bottom   : 20px;
-  opacity          : 0.6;
-  color            : #fff;
-  background-color : transparent;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 20px;
+    opacity: 0.6;
+    color: #fff;
+    background-color: transparent;
 }
 
 .page-fullscreen footer .copyright {
-  color : #fff;
+    color: #fff;
 }
 
 .page-fullscreen footer .copyright a {
-  color : #fff;
+    color: #fff;
 }
 
 .page-fullscreen footer .copyright a:hover {
-  color : #ddd;
+    color: #ddd;
 }
