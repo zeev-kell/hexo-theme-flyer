@@ -1,0 +1,33 @@
+.archive-list {
+    a {
+        color: #0085a1;
+        word-break: break-all;
+    }
+    .date {
+        color: #7f8c8d;
+        min-width: 5rem;
+    }
+    li:not(.title) {
+        padding-left: 3rem;
+    }
+    li {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+}
+
+.category-list,
+.tag-list {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+    > li {
+        display: inline-block;
+        margin: .2em .2em;
+    }
+}
+.tag-list-count{
+	font-size: .8em;
+}

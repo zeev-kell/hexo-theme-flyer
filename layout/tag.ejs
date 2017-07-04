@@ -3,18 +3,6 @@ layout: page
 ---
 
 <!-- tag -->
-<section>
-	<div class="row">
-		<div class="col-md-9 col-xs-12">
-			<%- partial('_partial/archive', { type: 'tag' }) %>
-		</div>
-		<div class="col-md-3 hidden-xs sidebar-container">
-	    	<section>
-			    <h5><a><%= __('Tags') %></a></h5>
-			    <div class="widget">
-			      <%- tagcloud() %>
-			    </div>
-			</section>
-		</div>
-	</div>
+<section class="container-theme">
+	<%- partial('_partial/archive') %>
 </section>

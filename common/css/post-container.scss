@@ -108,7 +108,14 @@
 .post-container,
 .post-content-preview {
     code {
-        background: none;
+        background: #f8f8f8;
+        color: #e96900;
+        margin: 0 2px;
+        font-size: 0.8em;
+        padding: 2px 3px;
+        font-family: 'Roboto Mono', Monaco, courier, monospace;
+        border-radius: 2px;
+        white-space: inherit;
     }
 }
 

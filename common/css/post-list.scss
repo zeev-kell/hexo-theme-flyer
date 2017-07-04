@@ -9,12 +9,6 @@
   a:focus {
     text-decoration : none;
   }
-  @media (min-width : 1200px) {
-    max-width    : 1000px;
-    width        : 1000px;
-    margin-right : auto;
-    margin-left  : auto;
-  }
   .post-preview:last-child {
     margin-bottom : 3rem;
   }
@@ -44,7 +38,7 @@
   border       : 1px solid #ecf0f1;
   border-width : 1px 0 1px 0;
   padding      : 20px 0;
-  font-size    : 1rem;
+  font-size    : .9rem;
   color        : #7f8c8d;
   > li {
     display      : inline-block;
