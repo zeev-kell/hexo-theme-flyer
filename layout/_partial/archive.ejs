@@ -3,6 +3,7 @@
     var years = {};
     if(page.posts){
         page.posts.sort('date').reverse().forEach(function (post) {
+            console.log(post.date.month());
             var year = post.date.year()
             if (years[year] === undefined) {
                 years[year] = [];

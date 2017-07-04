@@ -1,72 +1,72 @@
 .highlight .table-responsive {
-    border: none;
-    margin: 0;
+  border : none;
+  margin : 0;
 }
 
 .highlight pre {
-    border: none;
-    margin: 0;
-    padding: 1px;
+  border  : none;
+  margin  : 0;
+  padding : 1px;
 }
 
 .highlight table {
-    margin: 0;
-    width: auto;
-    border: none;
+  margin : 0;
+  width  : auto;
+  border : none;
 }
 
 .highlight td {
-    border: none !important;
-    padding: 0;
+  border  : none !important;
+  padding : 0;
 }
 
 .highlight figcaption {
-    zoom: 1;
-    font-size: 1em;
-    color: #c5c8c6;
-    line-height: 1em;
-    margin-bottom: 1em;
+  zoom          : 1;
+  font-size     : 1em;
+  color         : #c5c8c6;
+  line-height   : 1em;
+  margin-bottom : 1em;
 }
 
 .highlight figcaption:before,
 .highlight figcaption:after {
-    content: "";
-    display: table;
+  content : "";
+  display : table;
 }
 
 .highlight figcaption:after {
-    clear: both;
+  clear : both;
 }
 
 .highlight figcaption a {
-    float: right;
-    color: #c5c8c6;
+  float : right;
+  color : #c5c8c6;
 }
 
 .highlight figcaption a:hover {
-    border-bottom-color: #c5c8c6;
+  border-bottom-color : #c5c8c6;
 }
 
 .highlight .gutter pre {
-    color: #666;
-    text-align: right;
-    padding-right: 20px;
+  color         : #666;
+  text-align    : right;
+  padding-right : 20px;
 }
 
 .highlight .line {
-    height: 20px;
+  height : 20px;
 }
 
 .gist table {
-    width: auto;
+  width : auto;
 }
 
 .gist table td {
-    border: none;
+  border : none;
 }
 
 pre .comment {
-    color: #969896;
+  color : #969896;
 }
 
 pre .variable,
@@ -81,7 +81,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-    color: #c66;
+  color : #c66;
 }
 
 pre .number,
@@ -91,7 +91,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-    color: #de935f;
+  color : #de935f;
 }
 
 pre .ruby .class .title,
@@ -105,12 +105,12 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-    color: #b5bd68;
+  color : #b5bd68;
 }
 
 pre .title,
 pre .css .hexcolor {
-    color: #8abeb7;
+  color : #8abeb7;
 }
 
 pre .function,
@@ -121,10 +121,74 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-    color: #81a2be;
+  color : #81a2be;
 }
 
 pre .keyword,
 pre .javascript .function {
-    color: #b294bb;
+  color : #b294bb;
+}
+
+.highlight {
+  position : relative;
+}
+
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after,
+.highlight .code:after {
+  position    : absolute;
+  top         : 0;
+  right       : 0;
+  color       : #bdc3c7;
+  text-align  : right;
+  font-size   : 0.75em;
+  padding     : 5px 10px 0;
+  line-height : 15px;
+  height      : 15px;
+  font-weight : 600;
+  content     : " ";
+}
+
+.highlight {
+  &.actionscript, &.javascript, &.mipsasm, &.elixir {
+    .code:after {
+      content : "JS";
+    }
+  }
+  &.coffeescript{
+    .code:after {
+      content : "CS";
+    }
+  }
+}
+
+.highlight.css .code:after {
+  content : "CSS";
+}
+
+.highlight.less .code:after {
+  content : "Less";
+}
+
+.highlight.scss .code:after {
+  content : "Scss";
+}
+
+.highlight.stylus .code:after {
+  content : "Stylus";
 }

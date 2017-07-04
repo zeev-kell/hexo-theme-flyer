@@ -1,25 +1,28 @@
+@import "var";
 .pagination {
-    text-align: center;
-    .prev,
-    .next {
-        display: none;
+  text-align : center;
+  .prev,
+  .next {
+    display : none;
+  }
+  .page-number {
+    display       : inline-block;
+    width         : 36px;
+    height        : 36px;
+    border-radius : 100%;
+    background    : #555;
+    color         : #FFF;
+    margin        : auto 5px;
+    line-height   : 36px;
+    text-align    : center;
+    &.current {
+      background : #ececec;
+      color      : #9c9c9c;
     }
-    .page-number {
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        border-radius: 100%;
-        background: #555;
-        color: #FFF;
-        margin: auto 5px;
-        line-height: 36px;
-        text-align: center;
-        &.current {
-            background: #ececec;
-            color: #9c9c9c;
-        }
+  }
+  .post-title {
+    @media (max-width : $tablet-xs) {
+      font-size : 1rem;
     }
-    .post-title{
-      font-size: 1.2rem;
-    }
+  }
 }

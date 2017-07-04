@@ -13,22 +13,23 @@ layout: page
     });
 %>
 
-<% Object.keys(years).reverse().forEach(function(year){ %>
-    <div class="archive-list">
-        <h2 class="listing-seperator" id="<%= year %>">
-            <%- year %>
-        </h2>
-        <ul>
-            <% years[year].map(function(post){ %>
-            <li>
-                <span class="date"><%= post.date.format('MM-DD') %></span>
-                <a href="<%- url_for(post.path) %>">
+<div class="archive-list">
+    <h2 class="listing-seperator" id="<%= year %>">
+        <%- year %>
+    </h2>
+    <ul>
+        <% page.posts.map(function(post){ %>
+        <li>
+            <span class="date"><%= post.date.format('MM-DD') %></span>
+            <a href="<%- url_for(post.path) %>">
                     <span>
                         <%- post.title || "Untitled" %>
                     </span>
-                </a>
-            </li>
-            <% }) %>
-        </ul>
-    </div>
-<% }) %>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+<div class="pagination">
+    <%- paginator() %>
+</div>
