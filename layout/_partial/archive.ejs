@@ -1,24 +1,12 @@
 <!-- Archive -->
-<%
-    var years = {};
-    if(page.posts){
-        page.posts.sort('date').reverse().forEach(function (post) {
-            var year = post.date.year()
-            if (years[year] === undefined) {
-                years[year] = [];
-            }
-            years[year].push(post);
-        });
-    }
-%>
-
-<% Object.keys(years).reverse().forEach(function(year){ %>
-    <div class="archive-list">
-        <h2 class="listing-seperator" id="<%= year %>">
-            <%- year %>
-        </h2>
-        <ul>
-            <% years[year].map(function(post){ %>
+<div class="archive-list">
+    <ul class="list-unstyled">
+        <%  var years_month; (page.posts || site.posts).sort('date').reverse().map(function(post){ %>
+            <%  post.years_month = post.date.format('YYYY-MM') %>
+            <%  if(years_month !=post.years_month){ %>
+                <%  years_month = post.years_month %>
+                    <li class="title"><h3><%- years_month %></h3></li>
+            <% } %>
             <li>
                 <span class="date"><%= post.date.format('MM-DD') %></span>
                 <a href="<%- url_for(post.path) %>">
@@ -27,7 +15,6 @@
                     </span>
                 </a>
             </li>
-            <% }) %>
-        </ul>
-    </div>
-<% }) %>
+        <% }) %>
+    </ul>
+</div>

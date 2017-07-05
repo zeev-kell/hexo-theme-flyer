@@ -1,8 +1,8 @@
 <!-- Header header.ejs -->
 <style type="text/css">
-    .site-heading{
-        <% if (is_home() || is_category() || is_tag()) { %>
-            /* home || category || tag */
+    .background{
+        <% if (is_home() || is_category() || is_tag() || is_archive()) { %>
+            /* home || category || tag || archive */
             background-image: url('<%= url_for(config["header-img"]) %>');
             background-position: bottom;
             color:#000;
@@ -21,6 +21,9 @@
     .navbar-custom .navbar-brand,
     .navbar-custom .nav li a{
         color: <%= page["color"] %>;
+    }
+    .navbar-custom .navbar-toggle .icon-bar {
+        background-color: <%= page["color"] %>;
     }
     <%} %>
 </style>

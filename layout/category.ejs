@@ -3,19 +3,18 @@ layout: page
 ---
 
 <!-- category -->
-<section>
-	<!-- <h1>Category: <%= page.category %></h1> -->
-	<div class="row">
-		<div class="col-md-9 col-xs-12">
-			<%- partial('_partial/archive', { type: 'category' }) %>
-		</div>
-		<div class="col-md-3 hidden-xs sidebar-container">
-	    	<section>
-			    <h5><a><%= __('Categories') %></a></h5>
-			    <div class="widget">
-			      <%- list_categories({show_count: theme.show_count}) %>
-			    </div>
-			</section>
-		</div>
-	</div>
-</section>
+<%- list_categories({}) %>
+<script>
+    var _active = "<%- page.category %>";
+    var _doms = document.getElementsByClassName("category-list-item");
+    [].slice.call(_doms).forEach(function (_dom) {
+        var _a = _dom.getElementsByTagName("a");
+        if(_a[0].innerHTML === _active){
+        	_dom.classList.add("active");
+        }
+        var count = _dom.getElementsByTagName("span") && ~~(_dom.getElementsByTagName("span")[0].innerHTML);
+        _dom.classList.add(count > 5 ? "badge-lot" : "badge-"+count);
+    })
+</script>
+<%- partial('_partial/post-list') %>
+<%- partial('_partial/birds') %>

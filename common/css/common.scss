@@ -7,22 +7,11 @@
 @import "pagination.scss";
 //@import "flex-layout.scss";
 @import "page-fullscreen.scss";
-@import "widget.css";
+@import "category.scss";
+@import "archive-list.scss";
 @import "iconfont.scss";
 @import "footer.scss";
 
 .subheading {
   min-height : 20px;
-}
-
-.flex-row {
-  display : flex;
-}
-
-.flex-center {
-  align-items : center;
-}
-
-.flex-ju-center {
-  justify-content : center;
 }

@@ -6,26 +6,54 @@ layout: layout
 <article>
     <div class="container">
         <div class="row">
-            <div class="col-md-9 post-container">
-                <%- page.content %>
+            <div class="col-xs-12 <% if(toc(page.content) == ''){ %><%= 'col-md-offset-1 col-md-10' %><% }else{ %><%= 'col-sm-9' %><% }%>">
+                <div class="post-container ">
+                    <%- page.content %>
+                </div>
+                <div class="footer">
+                    <ul class="post-meta" style="border: none;margin-bottom: 0;">
+                        <li>
+                            <span class="iconfont icon-folder"></span>
+                            <% page.categories.forEach(function(category){ %>
+                            <a class="category" href="<%= url_for(category.path) %>" title="<%= category.name %>">
+                                <span><%= category.name %></span>
+                            </a>
+                            <% }) %>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-tag1"></span>
+                            <% if (config.home_posts_tag){ %>
+                            <% page.tags.forEach(function(tag){ %>
+                            <%- partial('_partial/tag', {tag: tag}) %>
+                            <% }) %>
+                            <% } %>
+                        </li>
+                    </ul>
+                </div>
                 <div class="pagination">
                     <% if (page.prev){ %>
-                    <a class="prev-post" href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
-                        <%- page.prev.title %>
-                    </a>
+                    <h3 class="post-title pull-left">
+                        <a href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
+                            <%- page.prev.title %>
+                        </a>
+                    </h3>
                     <% } %>
                     <% if (page.next){ %>
-                    <a class="next-post" href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
-                        <%- page.next.title %>
-                    </a>
+                    <h3 class="post-title pull-right">
+                        <a href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
+                            <%- page.next.title %>
+                        </a>
+                    </h3>
                     <% } %>
                 </div>
             </div>
+            <% if (toc(page.content) != ""){ %>
             <%- partial('_partial/post-content') %>
+            <% } %>
         </div>
     </div>
 </article>
 
 <% if(config['anchorjs']) { %>
-<%- partial('_partial/anchor') %>
+    <%- partial('_partial/anchor') %>
 <% } %>

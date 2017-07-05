@@ -1,13 +1,9 @@
 <!-- post-content -->
 <% if (page.catalog && is_post()) { %>
-<aside id="post-content-wrap" class="col-md-3 col-md-offset-0">
-    <div id="post-content" class="post-article hidden-sx hidden-md">
+<aside id="post-content-wrap" class="col-sm-3 col-sm-offset-0 hidden-sx hidden-sm">
+    <div id="post-content" class="post-article">
         <strong class="connent-title"><span class="icon-content iconfont"></span><%= __('Contents') %></strong>
-        <% if (toc(page.content) != ""){ %>
         <%- toc(page.content, {"class": "connent-nav"}) %>
-        <% } else { %>
-        <ol class="nav"><%= __('none') %></ol>
-        <% } %>
     </div>
 </aside>
 <% } %>

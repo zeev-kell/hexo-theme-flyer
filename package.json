@@ -31,7 +31,8 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
-    "webpack": "^2.5.0"
+    "webpack": "^2.5.0",
+    "gulp-less": "^3.3.2"
   },
   "engines": {
     "node": ">= 4.0.0",

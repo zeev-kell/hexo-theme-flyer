@@ -1,13 +1,10 @@
+@import "var";
 .pagination {
   text-align : center;
-  .prev, .next {
+  margin-bottom: .5rem;
+  .prev,
+  .next {
     display : none;
-  }
-  .prev-post {
-    float : left;
-  }
-  .next-post {
-    float : right;
   }
   .page-number {
     display       : inline-block;
@@ -22,6 +19,11 @@
     &.current {
       background : #ececec;
       color      : #9c9c9c;
+    }
+  }
+  .post-title {
+    @media (max-width : $tablet-xs) {
+      font-size : 1rem;
     }
   }
 }
