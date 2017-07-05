@@ -3,6 +3,18 @@ layout: page
 ---
 
 <!-- tag -->
-<section class="container-theme">
-	<%- partial('_partial/archive') %>
-</section>
+<%- list_tags({}) %>
+<script>
+	var _active = "<%- page.tag %>";
+    var _doms = document.getElementsByClassName("tag-list-item");
+    [].slice.call(_doms).forEach(function (_dom) {
+        var _a = _dom.getElementsByTagName("a");
+        if(_a[0].innerHTML === _active){
+        	_dom.classList.add("active");
+        }
+        var count = _dom.getElementsByTagName("span") && ~~(_dom.getElementsByTagName("span")[0].innerHTML);
+        _dom.classList.add(count > 5 ? "badge-lot" : "badge-"+count);
+    })
+</script>
+<%- partial('_partial/post-list') %>
+<%- partial('_partial/birds') %>

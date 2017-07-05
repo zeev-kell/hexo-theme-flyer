@@ -3,12 +3,6 @@ layout: page
 ---
 
 <div class="container-theme">
-    <div class="iconfont icon-folder">
-        <%- list_categories({}) %>
-    </div>
-    <div class="iconfont icon-tag1">
-        <%- list_tags({}) %>
-    </div>
     <%- partial('_partial/archive') %>
     <script>
         function addCount(_class) {
@@ -19,7 +13,8 @@ layout: page
                 _dom.classList.add(count > 5 ? _className += "lot" : _className += count);
             })
         }
-        addCount("tag-list-count");
-        addCount("category-list-count");
+        // addCount("tag-list-count");
+        // addCount("category-list-count");
     </script>
 </div>
+<%- partial('_partial/birds') %>

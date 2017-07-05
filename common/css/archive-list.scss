@@ -2,10 +2,12 @@
   a {
     color      : #0085a1;
     word-break : break-all;
+        text-decoration: none;
   }
   .date {
     color     : #7f8c8d;
     min-width : 5rem;
+        margin-right: 1rem;
   }
   li:not(.title) {
     padding-left : 3rem;
@@ -20,16 +22,22 @@
 .tag-list {
   list-style    : none;
   padding       : 0;
-  display       : inline-block;
-  border-bottom : 1px solid #eee;
-  margin-bottom : 1rem;
+  margin-bottom : 0;
   > li {
     display : inline-block;
     margin  : .2em .2em;
   }
 }
 
-.tag-list-count {
-  font-size      : .8em;
-  vertical-align : super;
+.tag-list-count ,.category-list-count{
+  font-size      : .7em;
+  margin: 0 2px 0 1px;
+}
+
+.tag-list-item.active,.category-list-item.active{
+  background: #f8f8f8;
+    color: #e96900;
+    a{
+      color: inherit;
+    }
 }

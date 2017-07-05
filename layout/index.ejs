@@ -1,41 +1,8 @@
 ---
 layout: page
 ---
-<div class="post-list container-theme">
-    <% page.posts.each(function(post){ %>
-    <div class="post-preview">
-        <div class="post-header">
-            <h3 class="post-title">
-                <a href="<%- url_for(post.path) %>">
-                    <%- post.title || "Untitled" %>
-                </a>
-            </h3>
-        </div>
-        <div class="post-content-preview">
-            <%- post.excerpt || truncate_markdown(post.content) %>
-        </div>
-        <%- partial('_partial/post-meta', {post: post}) %>
-    </div>
-    <% }); %>
-</div>
+<%- partial('_partial/post-list') %>
 <div class="pagination">
     <%- paginator() %>
 </div>
-<script>
-    if (window.innerWidth > 767) {
-        var loadSrc = function (src, callback) {
-            var script = document.createElement('script'),
-                head = document.getElementsByTagName('head')[0];
-            script.src = src;
-            if (callback) {
-                script.addEventListener('load', function (e) {
-                    callback(null, e);
-                }, false);
-            }
-            head.appendChild(script);
-        }
-        loadSrc("/js/three_birds.js", function () {
-            loadSrc("/js/birds.js")
-        });
-    }
-</script>
+<%- partial('_partial/birds') %>

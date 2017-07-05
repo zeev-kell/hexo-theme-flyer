@@ -75,6 +75,18 @@ select {
     background: #fff;
 }
 
+
+code {
+    background: #f8f8f8;
+    color: #e96900;
+    margin: 0 2px;
+    font-size: 0.8em;
+    padding: 2px 3px;
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
+    border-radius: 2px;
+    white-space: inherit;
+}
+
 pre,
 .table-responsive {
     -webkit-overflow-scrolling: touch;
@@ -85,23 +97,4 @@ pre code {
     width: auto;
     white-space: pre;
     word-wrap: normal;
-}
-
-
-/* archive */
-
-.listing-seperator {
-    font-size: 1.5em;
-    margin: 0;
-    line-height: 1.7;
-}
-
-.archive-list {
-    margin: 10px 0;
-    .date {
-        margin-right: 1rem;
-    }
-    a {
-        text-decoration: none;
-    }
 }
