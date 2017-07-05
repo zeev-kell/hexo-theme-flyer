@@ -10,4 +10,16 @@ layout: page
         <%- list_tags({}) %>
     </div>
     <%- partial('_partial/archive') %>
+    <script>
+        function addCount(_class) {
+            var _doms = document.getElementsByClassName(_class);
+            [].slice.call(_doms).forEach(function (_dom) {
+                var count = _dom.innerHTML && ~~(_dom.innerHTML);
+                var _className = "badge-";
+                _dom.classList.add(count > 5 ? _className += "lot" : _className += count);
+            })
+        }
+        addCount("tag-list-count");
+        addCount("category-list-count");
+    </script>
 </div>

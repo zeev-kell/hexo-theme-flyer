@@ -296,7 +296,9 @@
         birds = [];
         boids = [];
 
-        for (var i = 0; i < 10; i++) {
+        var count = Math.random() * 0.03 * (window.innerWidth - 800) + 10;
+        console.log("Will create " + count.toFixed(0) + " Birds !");
+        for (var i = 0; i < count; i++) {
 
             boid = boids[i] = new Boid();
             boid.position.x = Math.random() * 400 - 200;

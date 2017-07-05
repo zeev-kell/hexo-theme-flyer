@@ -32,13 +32,13 @@
     position  : relative;
     z-index   : 2;
   }
-  @media screen and (max-width : $contain-desktop) {
-    height : 400px;
-  }
-  @media screen and (max-width : $contain-laptop) {
+  @media screen and (max-width : 1400px) {
     height : 350px;
   }
-  @media screen and (max-width : $contain-tablet) {
+  @media screen and (max-width : $contain-desktop) {
+    height : 350px;
+  }
+  @media screen and (max-width : $contain-laptop) {
     height : 300px;
   }
 }
