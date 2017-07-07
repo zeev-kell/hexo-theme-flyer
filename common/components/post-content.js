@@ -1,4 +1,4 @@
-import "./post-content.scss";
+import "./post-content.styl";
 $(function () {
     var $postContent = $('#post-content');
     if ($postContent.length) {

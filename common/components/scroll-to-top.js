@@ -1,4 +1,4 @@
-import "./scroll-to-top.scss";
+import "./scroll-to-top.styl";
 var scrollToTop = '<a id="scroll-to-top" href="#" class=""></a>';
 
 $(function() {

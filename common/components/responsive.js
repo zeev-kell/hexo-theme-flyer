@@ -1,6 +1,6 @@
 
 // responsive tables
-import "./responsive.scss";
+import "./responsive.styl";
 $(function() {
     $("table").wrap("<div class='table-responsive'></div>");
     $("table").addClass("table");

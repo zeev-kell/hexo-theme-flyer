@@ -1,4 +1,4 @@
-import "./nav-bar.scss";
+import "./nav-bar.styl";
 import {loadSrc} from "../js/utils.js";
 $(function ($) {
     var MQL = 1170;
