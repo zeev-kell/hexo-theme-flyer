@@ -23,6 +23,12 @@ body {
     }
 }
 
+.container {
+    @media (max-width: $tablet-xs) {
+        width: 100%;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -75,7 +81,6 @@ select {
     background: #fff;
 }
 
-
 code {
     background: #f8f8f8;
     color: #e96900;
@@ -97,4 +102,9 @@ pre code {
     width: auto;
     white-space: pre;
     word-wrap: normal;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
 }

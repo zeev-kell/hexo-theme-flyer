@@ -1,8 +1,11 @@
+
 // responsive tables
+import "./responsive.scss";
 $(function() {
     $("table").wrap("<div class='table-responsive'></div>");
     $("table").addClass("table");
 });
+
 
 // responsive embed videos
 $(function() {

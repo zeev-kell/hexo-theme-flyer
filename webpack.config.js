@@ -22,10 +22,10 @@ plugins.push(new ExtractTextPlugin('../css/common.min.css'));
 
 if (isPro) {
     plugins.push(new webpack.optimize.UglifyJsPlugin({
-        compress : {
-            warnings     : false,
+        compress: {
+            warnings: false,
             drop_debugger: isPro,
-            drop_console : isPro
+            drop_console: isPro
         },
         sourceMap: false
     }));
@@ -34,11 +34,11 @@ if (isPro) {
 }
 
 var config = {
-    entry  : {
+    entry: {
         common: common("js/common.js")
     },
-    output : {
-        path    : resolve("js"),
+    output: {
+        path: resolve("js"),
         publicPath: "/js/",
         filename: '[name].min.js'
     },
@@ -46,34 +46,45 @@ var config = {
         extensions: ['.js', '.styl', '.css']
     },
     plugins: plugins,
-    module : {
+    module: {
         rules: [{
-            test   : /\.js$/,
-            loader : 'babel-loader',
+            test: /\.js$/,
+            loader: 'babel-loader',
             include: [resolve('')]
         }, {
-            test  : /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+            test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
             loader: 'url-loader',
-            query : {
+            query: {
                 limit: 10000,
-                name : path.posix.join("..", 'img/[name].[ext]')
+                name: path.posix.join("..", 'img/[name].[ext]')
             }
         }, {
-            test  : /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
             loader: 'url-loader',
-            query : {
+            query: {
                 limit: 10000,
-                name : path.posix.join("..", 'fonts/[name].[ext]')
+                name: path.posix.join("..", 'fonts/[name].[ext]')
             }
         }, {
             test: /\.scss$/,
-            use : ExtractTextPlugin.extract({
+            use: ExtractTextPlugin.extract({
                 use: [{
-                    loader : 'css-loader'
+                    loader: 'css-loader'
                 }, {
                     loader: 'postcss-loader'
                 }, {
-                    loader : 'sass-loader'
+                    loader: 'sass-loader'
+                }]
+            })
+        }, {
+            test: /\.styl$/,
+            use: ExtractTextPlugin.extract({
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'postcss-loader'
+                }, {
+                    loader: 'stylus-loader'
                 }]
             })
         }]
