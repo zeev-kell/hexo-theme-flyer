@@ -66,17 +66,6 @@ var config = {
                 name: path.posix.join("..", 'fonts/[name].[ext]')
             }
         }, {
-            test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                use: [{
-                    loader: 'css-loader'
-                }, {
-                    loader: 'postcss-loader'
-                }, {
-                    loader: 'sass-loader'
-                }]
-            })
-        }, {
             test: /\.styl$/,
             use: ExtractTextPlugin.extract({
                 use: [{
