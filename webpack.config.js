@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
-var isPro = process.env.NODE_ENV == "production";
+var isPro = process.env.NODE_ENV === "production";
 
 function resolve(dir) {
     return path.join(__dirname, 'source', dir)
