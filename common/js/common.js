@@ -1,4 +1,4 @@
-import "../css/common.scss";
+import "../css/common.styl";
 import "../components/scroll-to-top.js";
 import "../components/nav-bar.js";
 import "../components/post-content.js";

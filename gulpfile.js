@@ -2,7 +2,7 @@
  * Created by keziyuan on 2016/1/5.
  *
  */
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     webpack = require('webpack');
 
 /**
@@ -17,7 +17,7 @@ gulp.task('default', ['webpack'], function () {
 gulp.task("webpack", function (callback) {
     webpack(config, function (err, stats) {
         if (err) console.log(err);
-        var jsonStats = stats.toJson();
+        let jsonStats = stats.toJson();
         if (jsonStats.errors.length > 0)
             console.log(jsonStats.errors.join("\n"));
         if (jsonStats.warnings.length > 0)
@@ -27,8 +27,8 @@ gulp.task("webpack", function (callback) {
 });
 
 gulp.task("less", function () {
-    var less = require("gulp-less");
-    var cleanCss = require("gulp-clean-css");
+    let less = require("gulp-less");
+    let cleanCss = require("gulp-clean-css");
     return gulp.src("./common/css/bootstrap.less")
         .pipe(less())
         .on('error', function (err) {
@@ -39,7 +39,7 @@ gulp.task("less", function () {
 })
 
 gulp.task("uglify", function () {
-    var uglify   = require('gulp-uglify');
+    let uglify   = require('gulp-uglify');
     return gulp.src("./common/js/birds.js")
         .pipe(uglify())
         .on('error', function (err) {

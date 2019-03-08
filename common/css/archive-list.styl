@@ -1,16 +1,23 @@
+@import "var.styl";
 .archive-list {
     a {
-        color: #0085a1;
         word-break: break-all;
         text-decoration: none;
+        font-weight: 700;
     }
     .date {
         color: #7f8c8d;
         min-width: 5rem;
         margin-right: 1rem;
+        @media (max-width: $tablet-xs) {
+            margin-right: .5rem;
+        }
     }
     li:not(.title) {
         padding-left: 3rem;
+        @media (max-width: $tablet-xs) {
+            padding-left: 1rem;
+        }
     }
     li {
         padding-top: 2px;

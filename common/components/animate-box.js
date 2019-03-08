@@ -1,4 +1,4 @@
-import "./animate-box.scss";
+import "./animate-box.styl";
 $(function() {
     var time = 0; //-- 累计时间值
     $('.animate-box').each(function() {

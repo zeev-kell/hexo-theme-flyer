@@ -1,7 +1,7 @@
 <!-- Archive -->
 <div class="archive-list">
     <ul class="list-unstyled">
-        <%  var years_month; (page.posts || site.posts).sort('date').reverse().map(function(post){ %>
+        <%  var years_month; site.posts.sort('date').reverse().map(function(post){ %>
             <%  post.years_month = post.date.format('YYYY-MM') %>
             <%  if(years_month !=post.years_month){ %>
                 <%  years_month = post.years_month %>
